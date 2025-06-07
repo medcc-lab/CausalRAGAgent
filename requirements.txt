@@ -1,0 +1,24 @@
+# Core Python
+json
+os
+re
+argparse
+pickle
+pathlib
+collections
+
+# Third-party
+nltk
+tqdm
+rapidfuzz
+fitz
+transformers
+torch
+neo4j
+python-dotenv
+langchain-core
+langchain-openai
+langchain-ollama
+tiktoken
+
+# Note: Some dependencies may require specific versions for compatibility. Adjust as needed.
