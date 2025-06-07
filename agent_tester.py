@@ -108,7 +108,7 @@ for folder in output_root.iterdir():
             response = llm.invoke(prompt)
             content = response.content if hasattr(response, "content") else str(response)
             
-            # Debugging: print the raw response before processing
+            
             print(f"Raw response: {content}")
             
             content = re.sub(r"```json|```", "", content).strip()

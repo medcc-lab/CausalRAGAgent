@@ -11,7 +11,7 @@ from agent_relationship_extractor import extract_relationships, read_text_file
 from ontology_validator import validate
 from agent_neo4j_adder import add_to_neo4j
 
-# Path configurations (unchanged)
+# Path configurations
 CLEANED_DIR = Path("./dataset/cleaned_papers")
 RESEARCH_DIR = Path("./dataset/research_papers")
 OUTPUT_ROOT = Path("./output")

@@ -7,7 +7,7 @@ from typing import Optional, Dict
 from neo4j import GraphDatabase
 from dotenv import load_dotenv
 
-# Load .env variables
+
 load_dotenv()
 
 class Neo4jGraph:

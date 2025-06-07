@@ -71,7 +71,6 @@ def clean_entities(input_file, cleaned_output, final_output, score_threshold=0.8
     with open(final_output, 'w', encoding='utf-8') as f:
         json.dump([e['text'] for e in cleaned], f, indent=2, ensure_ascii=False)
 
-    # Summary
     print(f"Original: {len(entities)} entities")
     print(f"Cleaned: {len(cleaned)} entities")
     print(f"Removed: {len(entities) - len(cleaned)} entities")

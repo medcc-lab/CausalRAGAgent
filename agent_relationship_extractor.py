@@ -129,7 +129,6 @@ def extract_relationships(text, entities, core_entity, backend="ollama"):
         try:
             relationships = json.loads(fixed_response)
         except json.JSONDecodeError:
-            # If direct parse fails, try extracting JSON
             json_match = re.search(r'(\[.*\]|\{.*\})', fixed_response, re.DOTALL)
             if json_match:
                 try:
@@ -180,9 +179,8 @@ def read_text_file(file_path):
 
 def main():
     output_dir = Path("./output")
-    cleaned_papers_dir = Path("./dataset/cleaned_papers")  # Changed from research_papers
+    cleaned_papers_dir = Path("./dataset/cleaned_papers")  
     
-    # Load final entities (unchanged)
     entities_path = output_dir / "final_entities.json"
     try:
         with open(entities_path, "r") as f:
@@ -190,14 +188,13 @@ def main():
     except Exception as e:
         raise ValueError(f"Failed to load entities: {str(e)}")
 
-    # Changed from reading PDF to reading TXT
-    text_file_path = cleaned_papers_dir / SPECIFIC_FILE  # Hardcoded as before
+
+    text_file_path = cleaned_papers_dir / SPECIFIC_FILE  
     try:
-        research_text = read_text_file(text_file_path)  # Using new text reader
+        research_text = read_text_file(text_file_path)  
     except Exception as e:
         raise ValueError(f"Failed to read text file: {str(e)}")
 
-    # Rest of the code remains EXACTLY the same...
     relationships = extract_relationships(research_text, entities)
     
     output_path = output_dir / "extracted_relationships.json"

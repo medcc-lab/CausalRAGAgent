@@ -77,6 +77,6 @@ def extract_entities_from_file(filename: str, output_folder: Path):
 
     print(f"✅ Extracted {len(entities)} entities to {output_path}")
 
-# Optional: Remove or comment out main() block
+
 if __name__ == "__main__":
     print("❌ This script should be used via main_pipeline.py")
