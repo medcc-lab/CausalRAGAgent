@@ -1,4 +1,4 @@
-# WA Project - README
+# With Agent(WA) Project - README
 
 ## Setup Instructions
 
